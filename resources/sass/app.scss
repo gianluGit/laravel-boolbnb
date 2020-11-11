@@ -1,0 +1,584 @@
+// Fontawesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+// Variables
+@import "variables";
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+
+// SASS Custom
+//General changes
+#checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    .comfort-check {
+        margin-right: 10px;
+    }
+    input {
+        height: auto;
+        margin-left: 7px;
+        margin-right: 2px;
+    }
+    input:first-of-type {
+        margin-left: 0;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+  margin-bottom: 50px;
+}
+.back-homepage-btn {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: auto;
+    border-radius: 0.25rem;
+    background-color: #ece9e9;
+    cursor: pointer;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+.back-homepage-btn:hover {
+  background-color: #d8d6d6;
+  transition: 0.15s all ease-in-out;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.checkboxes {
+    label {
+        margin-right: 20px;
+    }
+    input {
+        margin-right: 5px;
+    }
+}
+#user_appartments {
+    li {
+        margin-bottom: 10px;
+    }
+}
+.white-txt {
+    color: #fff;
+}
+// Debug APP
+#app {
+
+    .navbar-light .navbar-nav .nav-link,
+    .dropdown-item {
+        font-weight: bold;
+    }
+    .dropdown-menu-right {
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+        i {
+            color: #ff385c;
+        }
+
+    }
+    .navbar-light .navbar-toggler {
+        background-color: #f7f7f7;
+    }
+    .navbar .container {
+        padding: 5px 0px !important;
+    }
+    .air-logo {
+        display: flex;
+        align-items: center;
+        svg {
+            color: #ff385c;
+        }
+        a {
+            margin-left: 5px;
+            // color: #fff;
+        }
+    }
+}
+//Form Search Apartament//
+.search-form-welcome {
+    display: flex;
+    // height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: url(img/jumbo.jpg) no-repeat center center/cover;
+    height: 50vh;
+    border-top: 2px solid #ff385c;
+    border-bottom: 2px solid #dddd;
+    .row {
+        .content {
+            form {
+                background-color: white;
+                border-radius: 40px;
+                padding: 1%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                input,
+                select {
+                    border: transparent;
+                    background: transparent;
+                    outline: none;
+                    padding: 1%;
+                    border-radius: 30px;
+                    cursor: pointer;
+                }
+                input:hover,
+                select:hover {
+                    background-color: #ebebeb;
+                }
+                button {
+                    background-color: #ff385c;
+                    border-radius: 100%;
+                    color: #fff;
+                    border: none;
+                    min-width: 50px;
+                    padding: 10px;
+                    margin-left: 5px;
+                    transition: 0.35s all ease-in-out;
+                }
+                button:hover {
+                    background-color: #e41c59;
+                }
+                .line {
+                    width: 0%;
+                    height: 30px;
+                    border-left: 1px solid #dddddd;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+//WRAPPER
+#wrapper .container,
+#wrapper .container .row {
+    height: 100%;
+}
+#wrapper .container h2 {
+    margin: 10px 0;
+}
+//debugWrapper
+#wrapper .container .row .col-xs-6 {
+    padding: 0;
+    margin: 30px 0;
+    // min-width: 350px;
+    // min-height: 300px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 10px;
+
+    .card-suite-img {
+        border: 1px solid #dddd;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+        background: #ccc;
+        width: 100%;
+        height: 80%;
+    }
+    .card-suite-description {
+        border: 1px solid #dddd;
+        background-color: #f7f7f7;
+        padding: 10px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        i {
+            color: #ff385c;
+            font-size: 18px;
+        }
+    }
+}
+//Register Card
+#app {
+    .py-0 {
+        .container {
+            .row {
+                [class*="col-"] {
+                    .card {
+                        .card-header {
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                        label {
+                            font-weight: 900;
+                        }
+                        input {
+                            background: transparent;
+                            outline: none;
+                            padding: 15px;
+                            border-radius: 30px;
+                            outline: none;
+                            box-shadow: none;
+                            transition: 0.15s all ease-in-out;
+                        }
+                        button {
+                            background-color: #ff385c;
+                            border: none;
+                        }
+                        button:hover {
+                            background-color: #e41c59;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//Login form
+.form-check {
+    display: flex;
+    align-items: center;
+    .form-check-input {
+        margin-bottom: 3px;
+    }
+}
+//Search Apartament Card
+#app {
+    .py-0 {
+        .container {
+            .search-app-form {
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                border-radius: 10px;
+                padding: 10px;
+                label {
+                    font-weight: 800;
+                }
+                input,
+                select {
+                    // border: none;
+                    border: 0.5px solid #cecece;
+                    padding: 5px;
+                    height: 30px;
+                    background: #fff;
+                    outline: none;
+                    border-radius: 30px;
+                    outline: none;
+                    box-shadow: none;
+                }
+                #checkboxes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .comfort-check {
+                        margin-right: 10px;
+                    }
+                    input {
+                        height: auto;
+                        margin-left: 7px;
+                        margin-right: 2px;
+                    }
+                    input:first-of-type {
+                        margin-left: 0;
+                    }
+                }
+                button {
+                    color: #fff;
+                    background-color: #ff385c;
+                    border: none;
+                }
+                button:hover {
+                    background-color: #e41c59;
+                }
+            }
+        }
+    }
+    .search-app-cards {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+            border-radius: 10px;
+            padding: 10px;
+            .card {
+                background-color: #f8fafc;
+                padding: 25px;
+                text-align: left;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                border-radius: 0;
+                margin: 20px 0;
+                border: 1px solid #ddd;
+                .searched-app-details-li {
+                    width: 50%;
+                }
+                ul {
+                    list-style: none;
+                    margin-bottom: 0;
+                    i {
+                        color: #ff385c;
+                    }
+                }
+                .searched-app-details-img {
+                    width: 40%;
+                }
+                img {
+                    box-shadow: 0px 0px 10px 5px #e9ecef9c;
+                    border-radius: 8px;
+                    // margin: 20px 30px 20px 0;
+                    width: 300px;
+                    height: 200px;
+                }
+                .btn-show-details-search {
+                   position: absolute;
+                   right: 5%;
+                   top: 33%;
+                }
+                .details-btn {
+                    margin: 20px 0;
+                }
+            }
+        }
+}
+//Show Appartament
+.search-appartament-container {
+    .col-md-8 {
+        .card {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+            border-radius: 10px;
+            .card-body {
+                ul {
+                    list-style: none;
+                }
+                center {
+                    button {
+                        color: #fff;
+                    }
+                }
+            }
+            .show-img {
+                img {
+                    width: 80%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+            }
+            #map {
+                box-shadow: 0 0 5px 2px #0000003d;
+
+                    height: 400px;
+                    /* The height is 400 pixels */
+                    width: 100%;
+                    /* The width is the width of the web page */
+
+            }
+
+        }
+    }
+}
+//create Appartament //Edit//update//delete
+select[name="sorting"] {
+   -webkit-border-before-width: 10px;
+   border: 1px solid #ddd;
+   border-radius: 12px;
+}
+option{
+   border: none;
+}
+//   input[name="picture"]:active::before {
+//     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+//   }
+//IMG UPLOAD BUTTON
+input[name='picture'] {
+    border: none!important;
+    padding: 5px!important;
+    cursor: pointer;
+    border-radius: 0.15rem;
+    #file-upload-button {
+        background-color: #ff385c;
+    }
+}
+//User Appartments
+#user_appartments {
+    list-style: none;
+    margin-bottom: 18px;
+    .card-row{
+        display: flex;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-radius: 0;
+        border: none;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        .user-app-img {
+            img{
+                box-shadow: 0px 0px 10px 5px #e9ecef9c;
+                border-radius: 8px;
+                // margin: 20px 30px 20px 0;
+                width: 155px;
+                height: auto;
+            }
+        }
+       .container-fluid {
+           margin-top: 15px;
+           .user-app-btn-edit {
+               .edit-btn {
+                   background-color: #227DC7!important;
+               }
+               .edit-btn:hover {
+                   background-color: #0e62a7!important;
+               }
+           }
+       }
+    }
+}
+// User Messages Area
+.message-row {
+  list-style: none;
+  margin-bottom: 15px;
+  li {
+    margin-bottom: 5px;
+  }
+}
+.message-box {
+  margin-top: 15px;
+  border-bottom: solid 1px #dddddd;
+  .message-cnt-user {
+      cursor: pointer;
+  }
+  .messageTest {
+      border: 1px solid #dddddd;
+      background: #f7f7f7;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px 0;
+  }
+}
+//footer
+footer {
+    background-color: #F7F7F7;
+    border-top: 1px solid #DDDDDD;
+    height: 80px;
+    margin-top: auto;
+    .container {
+        height: 100%;
+        .row {
+            height: 100%;
+            align-items: center;
+            padding: 2%;
+            .footer-icons {
+                i {
+                    font-size: 20px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    transition: 0.15s all ease-in-out;
+                }
+                i:hover {
+                    color: #FF385C;
+                }
+            }
+        }
+    }
+}
+///////////////
+//Debug//
+//////////////
+ @media (max-width: 500px) {
+     #user_appartments {
+         .card-row {
+             text-align: center;
+             .container-fluid {
+                 flex-direction: column-reverse;
+                 .visible {
+                   margin-bottom: 4px;
+                 }
+             }
+         }
+     }
+ }
+@media (max-width: 795px) {
+    .search-form-welcome .row .content form {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: none;
+        width: 100%;
+        input,
+        select {
+            width: 100%;
+            background-color: #fff;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        }
+        input:hover {
+            background-color: #ebebeb;
+        }
+        button {
+            padding: 10px;
+            align-self: center;
+        }
+        .line {
+            display: none;
+        }
+    }
+    footer {
+      .container .row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+}
+@media (max-width: 480px) {
+  footer .container .license {
+    display: none;
+  }
+  footer .container .row {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 1000px) {
+    #app .container .search-app-cards .card {
+        flex-direction: column;
+        .searched-app-details-li {
+            width: 100%;
+        }
+        .searched-app-details-img {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            img {
+                width: 90%;
+                height: 300px;
+            }
+        }
+        .btn-show-details-search {
+            position: static;
+            text-align: center;
+        }
+    }
+}
+// Added Classes
+.visible {
+  border: solid 1px #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: #fffdfd;
+}
+
+@media (min-width: 795px) {
+  // il form di ricerca della welcome rimane fixed
+  .sticky {
+    position: fixed;
+    top: 5px;
+    z-index: 1000;
+  }
+
+
+}
