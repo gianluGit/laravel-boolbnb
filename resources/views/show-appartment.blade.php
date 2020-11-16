@@ -38,7 +38,7 @@
                               {{-- stampo la end_date --}}
                               @foreach ($suitesProm as $sui)
                                 @if ($suite -> id == $sui -> suite_id)
-                                  <span>{{$sui -> end_date}}</span>
+                                  <span>{{$sui -> created_at}}</span>
                                 @endif
                               @endforeach
 
