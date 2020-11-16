@@ -18,6 +18,8 @@ class GuestController extends Controller
 
     $users = User::all();
     $suite = Suite::findOrFail($id);
+    
+    $suitesProm = Suite::join('promotion_suite', 'suites.id', '=', 'promotion_suite.suite_id') -> select('promotion_suite.*') -> get();
 
     $view = [
 
@@ -56,7 +58,7 @@ class GuestController extends Controller
               ->where('suite_id', $id)
               ->count();
 
-    return view('show-appartment', compact('suite', 'users', 'totalVisits', 'dailyVisits', 'monthlyVisits', 'yearlyVisits'));
+    return view('show-appartment', compact('suite', 'users', 'totalVisits', 'dailyVisits', 'monthlyVisits', 'yearlyVisits', 'suitesProm'));
 
   }
 

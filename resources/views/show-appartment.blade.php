@@ -30,6 +30,18 @@
                                 @foreach ($suite -> promotions as $prom)
                                 <span style="color: green; font-weight: bold;"><i class="fa fa-clock-o" style="color: green;" aria-hidden="true"></i> {{$prom -> name}} </span>
                                 @endforeach
+
+
+                            </li>
+                            <li>
+                              End promotion:
+                              {{-- stampo la end_date --}}
+                              @foreach ($suitesProm as $sui)
+                                @if ($suite -> id == $sui -> suite_id)
+                                  <span>{{$sui -> end_date}}</span>
+                                @endif
+                              @endforeach
+
                             </li>
                             @endif
                             @endauth
@@ -43,7 +55,12 @@
                               <i class="fa fa-bar-chart" aria-hidden="true"></i> View Suite Stats
                             </a>
 
-                            <a href="{{ route('payment-index', $suite -> id) }}" style="text-decoration: none; border: none; color: white;" class="btn btn-success">
+                            {{-- disabilito il link se l'appartamento è già promosso --}}
+                            <a @foreach ($suitesProm as $sui)
+                              @if ($suite -> id == $sui -> suite_id)
+                                href="#"
+                              @endif
+                            @endforeach href="{{ route('payment-index', $suite -> id) }}" style="text-decoration: none; border: none; color: white;" class="btn btn-success">
                               <i class="fa fa-usd" aria-hidden="true"></i> Promote Appartment
                             </a>
 
