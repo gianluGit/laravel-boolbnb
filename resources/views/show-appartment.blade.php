@@ -38,7 +38,7 @@
                               {{-- stampo la end_date --}}
                               @foreach ($suitesProm as $sui)
                                 @if ($suite -> id == $sui -> suite_id)
-                                  <span>{{$sui -> end_date}}</span>
+                                  <span>{{ $sui -> end_date }}</span>
                                 @endif
                               @endforeach
 
@@ -59,6 +59,7 @@
                             <a @foreach ($suitesProm as $sui)
                               @if ($suite -> id == $sui -> suite_id)
                                 href="#"
+                                style="cursor: no-drop;"
                               @endif
                             @endforeach href="{{ route('payment-index', $suite -> id) }}" style="text-decoration: none; border: none; color: white;" class="btn btn-success">
                               <i class="fa fa-usd" aria-hidden="true"></i> Promote Appartment
